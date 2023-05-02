@@ -1,0 +1,3 @@
+C:/Users/tobin/CLionProjects/VectorMath/cmake-build-debug/CMakeFiles/VectorMath.dir
+C:/Users/tobin/CLionProjects/VectorMath/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/tobin/CLionProjects/VectorMath/cmake-build-debug/CMakeFiles/rebuild_cache.dir
