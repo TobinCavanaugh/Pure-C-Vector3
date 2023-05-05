@@ -1,0 +1,16 @@
+
+ic:S5276"Jimplicit conversion loses integer precision: 'unsigned long long' to 'int'(¬ÏŠæÿÿÿÿÿ8œ÷Êı0
+yc:S995'"bMake the type of this parameter a pointer-to-const. The current type of "a" is "struct Vector3 *".(¢ĞŠ¡ùÿÿÿÿ
+yc:S995;"bMake the type of this parameter a pointer-to-const. The current type of "a" is "struct Vector3 *".(½µÜÿÿÿÿÿÿ
+yc:S995;"bMake the type of this parameter a pointer-to-const. The current type of "b" is "struct Vector3 *".(½µÜÿÿÿÿÿÿ
+Pc:S5825"8Define the type with "typedef" instead of using a macro.(€ñã´üÿÿÿÿ
+{c:S995@"bMake the type of this parameter a pointer-to-const. The current type of "a" is "struct Vector3 *".(ÓÛëş8êìÊı0
+tc:S995@"bMake the type of this parameter a pointer-to-const. The current type of "b" is "struct Vector3 *".(ÓÛëş
+zc:S995M"cMake the type of this parameter a pointer-to-const. The current type of "v1" is "struct Vector3 *".(²—¸µúÿÿÿÿ
+zc:S995M"cMake the type of this parameter a pointer-to-const. The current type of "v2" is "struct Vector3 *".(²—¸µúÿÿÿÿ
+zc:S995W"cMake the type of this parameter a pointer-to-const. The current type of "v1" is "struct Vector3 *".(ôÉ£©ùÿÿÿÿ
+zc:S995W"cMake the type of this parameter a pointer-to-const. The current type of "v2" is "struct Vector3 *".(ôÉ£©ùÿÿÿÿ
+{c:S995\"bMake the type of this parameter a pointer-to-const. The current type of "v" is "struct Vector3 *".(˜ê‡î8„»ÍËı0
+€c:S995e"bMake the type of this parameter a pointer-to-const. The current type of "a" is "struct Vector3 *".(Ó„¤ëùÿÿÿÿ8Ô§×Ëı0
+{c:S995k"bMake the type of this parameter a pointer-to-const. The current type of "a" is "struct Vector3 *".(ªøıÅ8ÆáØËı0
+/c:S3584a"Potential memory leak(ñÚúó8“·÷Êı0
