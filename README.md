@@ -12,5 +12,7 @@ Installing it should be easy, just pop the .h and .c files into your project and
 
 I used CLion for this project and did my best to not touch any external or weird libraries, so this should be crossplatform. I don't see any reason it wouldn't be.
 
-<img src="https://raw.githubusercontent.com/TobinCavanaugh/Pure-C-Vector3/master/gitpage/header.png?token=GHSAT0AAAAAACBV3GXMZ6JA2UKE7K2SN6Q2ZCVP3XA" height="500" />
-<img src="https://raw.githubusercontent.com/TobinCavanaugh/Pure-C-Vector3/master/gitpage/typedef.png?token=GHSAT0AAAAAACBV3GXMPQWFOCT7RKHNTYBKZCVPY7A" height="255" />
+
+<img src="https://github.com/TobinCavanaugh/Pure-C-Vector3/blob/9a604916ebc6b828f1db4c8e47be09d7d2e697bf/gitpage/header.png" height="500">
+
+<img src="https://github.com/TobinCavanaugh/Pure-C-Vector3/blob/9a604916ebc6b828f1db4c8e47be09d7d2e697bf/gitpage/typedef.png" height="255" />
