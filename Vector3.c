@@ -25,7 +25,12 @@ int DigitCount(float n) {
     sprintf(array_buf, "%d", n);
 
     //Get the length of the string of the float
-    int digits = strlen(array_buf);
+    int digits = (long) strlen(array_buf);
+
+    //If theres a negative symbol
+    if(n < 0){
+        digits++;
+    }
 
     // free memory allocated for string
     free(array_buf);
@@ -36,15 +41,17 @@ void Vector3_Destroy(Vector3 *a) {
     free(a);
 }
 
-char *Vector3_ToString(Vector3 *a) {
+char *Vector3_ToString(const Vector3 *a) {
 
     const int xSize = DigitCount(a->x);
     const int ySize = DigitCount(a->y);
     const int zSize = DigitCount(a->z);
 
+    //This slightly overallocates but tbh its not a concern, at worst it'll be 3 or so extra chars
+
     //                   parenthesis \/      \/ null terminator
-    int val = xSize + ySize + zSize + 2 + 3 + 1;
-    //                             commas ^
+    int val = xSize + ySize + zSize + 2 + 3 + 1 + 3;
+    //                             commas ^ _____ ^ decimals
 
 
     char *dat = malloc(val);
@@ -56,25 +63,32 @@ char *Vector3_ToString(Vector3 *a) {
     return dat;
 }
 
-Vector3 *Vector3_Add(Vector3 *a, Vector3 *b) {
+
+void Vector3_Print(const Vector3 *a) {
+    char * str = Vector3_ToString(a);
+    printf("%s\n", str);
+    free(str);
+}
+
+Vector3 *Vector3_Add(const Vector3 *a, const Vector3 *b) {
     var v = Vector3_Create(a->x + b->x, a->y + b->y, a->z + b->z);
     return v;
 }
 
-Vector3 *Vector3_Subtract(Vector3 *a, Vector3 *b) {
+Vector3 *Vector3_Subtract(const Vector3 *a, const Vector3 *b) {
     var v = Vector3_Create(a->x - b->x, a->y - b->y, a->z - b->z);
     return v;
 }
 
 
-Vector3 *Vector3_Normalize(Vector3 *a) {
+Vector3 *Vector3_Normalize(const Vector3 *a) {
 
     float val = Vector3_Magnitude(a);
 
     return Vector3_Create(a->x / val, a->y / val, a->z / val);
 }
 
-Vector3 *Vector3_Cross(Vector3 *v1, Vector3 *v2) {
+Vector3 *Vector3_Cross(const Vector3 *v1, const Vector3 *v2) {
 
     var x = v1->y * v2->z - v1->z * v2->y;
     var y = v1->z * v2->x - v1->x * v2->z;
@@ -84,33 +98,37 @@ Vector3 *Vector3_Cross(Vector3 *v1, Vector3 *v2) {
     return v;
 }
 
-float Vector3_Dot(Vector3 *v1, Vector3 *v2) {
+float Vector3_Dot(const Vector3 *v1, const Vector3 *v2) {
     return v1->x * v2->x + v1->y * v2->y + v1->z * v2->z;
 }
 
 
-float Vector3_Magnitude(Vector3 *v) {
+float Vector3_Magnitude(const Vector3 *v) {
     return sqrtf(v->x * v->x + v->y * v->y + v->z * v->z);
 }
 
-float Vector3_Distance(Vector3 *a, Vector3 *b) {
-    return Vector3_Magnitude(Vector3_Subtract(a, b));
+float Vector3_Distance(const Vector3 *a, const Vector3 *b) {
+    var sub = Vector3_Subtract(a, b);
+    float mag = Vector3_Magnitude(sub);
+    free(sub);
+    return mag;
 }
 
 
-Vector3 *Vector3_Multiply(Vector3 *a, float b) {
+Vector3 *Vector3_Multiply(const Vector3 *a, float b) {
     var v = Vector3_Create(a->x * b, a->y * b, a->z * b);
     return v;
 }
 
 
-Vector3 *Vector3_Divide(Vector3 *a, float b) {
+
+Vector3 *Vector3_Divide(const Vector3 *a, float b) {
     var v = Vector3_Create(a->x / b, a->y / b, a->z / b);
     return v;
 }
 
 
-Vector3 *Vector3_Create(float x, float y, float z) {
+Vector3 *Vector3_Create(const float x, const float y, const float z) {
     Vector3 *vec = malloc(sizeof(Vector3));
 
     vec->x = x;
